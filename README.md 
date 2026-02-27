@@ -1,0 +1,41 @@
+*This project has been created as part of the 42 curriculum by narhakob*
+
+# ft_printf
+
+## Description
+
+The goal of this project is to recreate the standard C function `printf()`.  
+ft_printf handles formatted output and supports these conversion specifiers: %c, %s, %p, %d / %i, %u, %x / %X, %%.  
+
+This project teaches handling of variadic functions and formatted output in C.
+
+## Algorithm & Data Structures
+
+The program parses the format string character by character. When `%` is found, it determines the conversion type and prints the corresponding argument using `va_list`.  
+
+Data structures used:  
+- va_list for variable arguments  
+- Standard C types and arrays (no complex structures required)
+
+## Instructions & Resources
+
+Compilation:  
+make
+
+Usage:  
+Compile with your program:  
+gcc main.c libftprintf.a
+
+Requirements:  
+- GCC or Clang  
+- Make  
+- Linux or macOS  
+
+Resources:  
+- 42 ft_printf subject PDF  
+- C Standard Library documentation: https://man7.org/linux/man-pages/man3/printf.3.html  
+- man stdarg (for variadic functions)  
+- Tutorials on va_list, va_start, va_arg, va_end  
+- AI (ChatGPT) used only for clarifying variadic functions and improving README structure  
+
+All implementation, testing, and debugging were done manually.

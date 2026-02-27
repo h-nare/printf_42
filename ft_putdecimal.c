@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putdecimal.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: narehakobyan <narehakobyan@student.42.f    +#+  +:+       +#+        */
+/*   By: narhakob <narhakob@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 17:06:32 by narehakobya       #+#    #+#             */
-/*   Updated: 2026/02/26 20:41:51 by narehakobya      ###   ########.fr       */
+/*   Created: 2026/02/27 17:37:29 by narhakob          #+#    #+#             */
+/*   Updated: 2026/02/27 17:44:23 by narhakob         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putnbr(int c)
+int	ft_putnbr(int c)
 {
-	long nb;
-	int count;
-	char digit;
+	long	nb;
+	int		count;
+	char	digit;
 
 	nb = c;
 	count = 0;
@@ -26,14 +26,8 @@ int ft_putnbr(int c)
 		nb = -nb;
 	}
 	if (nb >= 10)
-	{
 		count += ft_putnbr(nb / 10);
-	}
 	digit = (nb % 10) + '0';
 	count += write(1, &digit, 1);
-
-	return count;
+	return (count);
 }
-
-
-
