@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: narhakob <narhakob@student.42.fr>          +#+  +:+       +#+        */
+/*   By: narehakobyan <narehakobyan@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 17:37:03 by narhakob          #+#    #+#             */
-/*   Updated: 2026/02/27 21:52:19 by narhakob         ###   ########.fr       */
+/*   Updated: 2026/03/01 00:37:39 by narehakobya      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_conversion(va_list var, char format)
 	else if (format == '%')
 		printed_char = write(1, "%", 1);
 	else if (format == 'x' || format == 'X')
-		printed_char = ft_hexidecimal(va_arg(var, unsigned int), format);
+		printed_char = ft_hexadecimal(va_arg(var, unsigned long), format);
 	else if (format == 'p')
 		printed_char = print_pointer(va_arg(var, void *));
 	return (printed_char);
